@@ -11,6 +11,8 @@ services:
       - webnet
 
   backend:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     build:
       context: ./backend
       dockerfile: docker/Dockerfile
