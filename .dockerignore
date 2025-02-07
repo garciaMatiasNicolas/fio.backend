@@ -1,0 +1,18 @@
+# Ignorar entornos virtuales y archivos generados por Python
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.csv
+migrations
+
+# Ignorar archivos de control de versiones
+.git
+.gitignore
+
+# Ignorar archivos de logs, documentación, tests y otros
+*.log
+.env
+docs/
+tests/

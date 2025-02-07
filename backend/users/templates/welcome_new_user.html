@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restablecimiento de Contraseña</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .email-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .header {
+      background-color: #3b71ca;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px 8px 0 0;
+      color: white;
+    }
+    .header img {
+      width: 120px; /* Ajusta el tamaño del logo */
+    }
+    .message {
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+    .token {
+      font-weight: bold;
+      font-size: 24px;
+      color: #3b71ca;
+      margin: 10px 0;
+    }
+    .reset-button {
+      display: block;
+      width: 100%;
+      max-width: 250px;
+      background-color: #3b71ca;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 20px auto;
+      text-decoration: none;
+    }
+    .reset-button:hover {
+      background-color: #2c5a98;
+    }
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      margin-top: 30px;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="email-container">
+    <!-- Header -->
+    <div class="header">
+        <h1 class="title">Bienvenido a DTA F&IO!</h1>
+    </div>
+
+    <!-- Body -->
+    <div class="message">
+      <p>Estimado usuario,</p>
+      <p>Usted fue dado de alta en nuestro sistema por parte de {{ user_admin }}</p>
+      <p>Su usuario es: {{ username }}</p>
+      <p>Su contraseña es: {{ password }}</p>
+      <a href="{{ link }}" class="reset-button">Inicie sesión aqui</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Si crees que esto es un error, puedes ignorar este correo.</p>
+    </div>
+  </div>
+
+</body>
+</html>

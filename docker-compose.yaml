@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+  nginx:
+    build: ./nginx
+    image: nginx:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - webnet
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: docker/Dockerfile
+    command: gunicorn --workers 8 --timeout 86400 --access-logfile - --log-level debug main.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+      - "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads:/uploads"
+    environment:
+      - DEBUG=${DEBUG}
+      - DB_PORT=${DB_PORT}
+      - DB_HOST=${DB_HOST}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - EMAIL_HOST_PASSWORD=${EMAIL_HOST_PASSWORD}
+      - EMAIL_HOST_USER=${EMAIL_HOST_USER}
+      - SECRET_KEY=${SECRET_KEY}
+      - DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE:-main.settings.production}
+      - FRONTEND_URL=${FRONTEND_URL:-http://localhost:3000}
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
