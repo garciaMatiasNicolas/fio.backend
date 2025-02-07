@@ -295,7 +295,7 @@ class FileSerializer(serializers.ModelSerializer):
         df_sales = df_sales.dropna(subset=['product_id'])
         df_sales = df_sales[['product_id', 'DATES', 'SALES']]
 
-        file_path = r'C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\sales_data.csv'
+        file_path = r'/home/mngarcia/apifio/mysql-uploads/sales_data.csv'
 
         # Write DataFrame to the specified CSV file
         with open(file_path, mode='w', newline='', encoding='utf-8') as temp_file:
@@ -491,7 +491,7 @@ class FileSerializer(serializers.ModelSerializer):
         max_id = Product.objects.filter(file__project=project).aggregate(Max('template_id'))['template_id__max'] or 0        
         
         ## Create csv ##
-        file_path = r'C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\stock_data.csv'
+        file_path = r'/home/mngarcia/apifio/mysql-uploads/stock_data.csv'
 
         existing_products_data['file_id'] = file_instance.id
         

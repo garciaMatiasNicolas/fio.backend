@@ -17,7 +17,7 @@ services:
     command: gunicorn --workers 8 --timeout 86400 --access-logfile - --log-level debug main.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./backend:/app
-      - "C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads:/uploads"
+      - "/home/mngarcia/apifio/mysql-uploads:/uploads"
     environment:
       - DEBUG=${DEBUG}
       - DB_PORT=${DB_PORT}
