@@ -1,9 +1,9 @@
 from .base import *
 
-DEBUG = False
+DEBUG = True
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-ALLOWED_HOSTS = ["localhost", "nginx", "127.0.0.1", "dtafio.vercel.app", "apifio.dtalogistica.com"]
+ALLOWED_HOSTS = ["149.50.133.150", "localhost", "nginx", "127.0.0.1", "dtafio.vercel.app", "apifio.dtalogistica.com"]
 
 CORS_ALLOW_CREDENTIALS = True
 

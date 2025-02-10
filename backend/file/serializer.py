@@ -83,6 +83,7 @@ class FileSerializer(serializers.ModelSerializer):
         return attrs
 
     def create(self, validated_data):
+        print("data recibida")
         request = self.context.get('request')
         user = request.user
         project = validated_data.get('project')
@@ -106,18 +107,20 @@ class FileSerializer(serializers.ModelSerializer):
         file_path = os.path.join(upload_dir, file_name)
 
         df.to_csv(file_path, index=False)
-
+        print("CSV creado")
         file_instance = File.objects.create(
             project=project,
             uploaded_by=user,
             file_type=file_type,
             file_path=file_path
         )
-
+        print("insancia de archiov creadaa")
         try:
+            print("Procesando data")
             self.process_data(data, file_instance, project, file_type)
 
         except Exception as e:
+            print(str(e))
             file_instance.delete()  
             raise serializers.ValidationError(f"Error processing data: {str(e)}")
 
@@ -127,15 +130,18 @@ class FileSerializer(serializers.ModelSerializer):
         df = pd.DataFrame(data).dropna(how='all')
 
         if file_type == 'historical':
+            print("Es historical")
             df = df.reset_index() 
             df = df.rename(columns={'index': 'ID'}) 
             df = self.format_dates(df=df, file_type='historical')
             project.max_historical_date = df.columns[-1]
             project.periods_per_year = df['Periods Per Year'].iloc[0]
             project.save()
+            print("Proyecto guardado")
             df = df.drop(columns=['Periods Per Year'])
-
+            print("procesando productos")
             self.process_products(file_instance=file_instance, df=df)
+            print("Productos creados!")
             self.process_sales(df=df, project=project)
         
         if file_type == 'launch_data':
@@ -295,8 +301,9 @@ class FileSerializer(serializers.ModelSerializer):
         df_sales = df_sales.dropna(subset=['product_id'])
         df_sales = df_sales[['product_id', 'DATES', 'SALES']]
 
-        file_path = r'/home/mngarcia/apifio/mysql-uploads/sales_data.csv'
+        file_path = r'/var/lib/mysql-files/sales_data.csv'
 
+        #sales_data = list(df_sales.itertuples(index=False, name=None))
         # Write DataFrame to the specified CSV file
         with open(file_path, mode='w', newline='', encoding='utf-8') as temp_file:
             csv_writer = csv.writer(temp_file)
@@ -315,11 +322,12 @@ class FileSerializer(serializers.ModelSerializer):
             IGNORE 1 ROWS
             (product_id, date, sale)
         """
-
-        with connection.cursor() as cursor:
-            cursor.execute(sql=sql)
         
-        os.remove(file_path)
+        try:
+          with connection.cursor() as cursor:
+            cursor.execute(sql=sql)  
+        except Exception as e:
+          print(f"Error inserting sales data: {e}")
 
     def process_exog_data(self, file_instance: File, df: pd.DataFrame, project: Projects):
         df_exog = df.melt(
@@ -491,7 +499,7 @@ class FileSerializer(serializers.ModelSerializer):
         max_id = Product.objects.filter(file__project=project).aggregate(Max('template_id'))['template_id__max'] or 0        
         
         ## Create csv ##
-        file_path = r'/home/mngarcia/apifio/mysql-uploads/stock_data.csv'
+        file_path = r'/var/lib/mysql-files/stock_data.csv'
 
         existing_products_data['file_id'] = file_instance.id
         
@@ -571,7 +579,7 @@ class FileSerializer(serializers.ModelSerializer):
                 stock_data['file_id'] = file_instance.id
 
                 ## Create csv ##
-                file_path = r'C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\stock_data_new_products.csv'
+                file_path ='/var/lib/mysql-files/stock_data_new_products.csv'
         
                 # Write DataFrame to the specified CSV file
                 with open(file_path, mode='w', newline='', encoding='utf-8') as temp_file:

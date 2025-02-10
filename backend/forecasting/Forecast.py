@@ -475,7 +475,7 @@ class Forecast(object):
             product = Product.objects.get(pk=data["product_id"])
             
             if data['best_model'] == True:
-                conditions |= Q(product_id=data['product_id'], model=data['model'])
+                conditions |= Q(product_id=data['product_id'], model=data['model'], scenario=data['scenario'])
             
             ytg = data['ytg'] if data['ytg'] is not None and -2147483648 <= data['ytg'] <= 2147483647 else 0
             qtg = data['qtg'] if data['qtg'] is not None and -2147483648 <= data['qtg'] <= 2147483647 else 0
