@@ -918,9 +918,9 @@ class ListModelsInformationAPIView(APIView):
         except Scenario.DoesNotExist:
             return Response({"error": "Scenario not found."}, status=status.HTTP_404_NOT_FOUND)
         
-        predicted_sales = PredictedSale.objects.filter(product__avg__gte=0 if scenario.filter_products else None, product__id=product_id,scenario=scenario)
-        actual_sales = Sales.objects.filter(product__avg__gte=0 if scenario.filter_products else None, product__id=product_id)
-        metrics = MetricsScenarios.objects.filter(product__avg__gte=0 if scenario.filter_products else None, product__id=product_id,scenario=scenario)
+        predicted_sales = PredictedSale.objects.filter(product__avg__gte=0 if scenario.filter_products else -1, product__id=product_id,scenario=scenario)
+        actual_sales = Sales.objects.filter(product__avg__gte=0 if scenario.filter_products else -1, product__id=product_id)
+        metrics = MetricsScenarios.objects.filter(product__avg__gte=0 if scenario.filter_products else -1, product__id=product_id,scenario=scenario)
 
         actual_data = (
             actual_sales
@@ -1061,7 +1061,7 @@ class KpisViews:
                     product__file__project__name=project, 
                     scenario=scenario, best_model=True, 
                     date__gt=max_historical_date,
-                    product__avg__gte=0 if scenario.filter_products else None
+                    product__avg__gte=0 if scenario.filter_products else -1
                 ).values(f"product__{group}").annotate(
                     ytg_predicted=Sum(
                         'sale',
@@ -1131,7 +1131,7 @@ class KpisViews:
                 return Response({"error": "Scenario not found."}, status=status.HTTP_404_NOT_FOUND)
             
             if scenario is not None:
-                products = Product.objects.filter(avg__gte=0 if scenario.filter_products else None, file__project__client=client, file__project__name=project)
+                products = Product.objects.filter(avg__gte=0 if scenario.filter_products else -1, file__project__client=client, file__project__name=project)
             
             else:
                 products = Product.objects.filter(file__project__client=client, file__project__name=project)

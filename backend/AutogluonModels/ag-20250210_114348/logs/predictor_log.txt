@@ -1,0 +1,2688 @@
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114348'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.32 GB / 34.36 GB (35.9%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:43:48
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.1000       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.99    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.03 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.1000
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114350'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.32 GB / 34.36 GB (35.9%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:43:50
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9179       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.96    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.99 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9179
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114352'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.32 GB / 34.36 GB (35.9%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:43:52
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.8098       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.94    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.97 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.8098
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114354-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.32 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:43:54
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9404       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	1.03    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.06 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9404
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114357'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.32 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:43:57
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.2118       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.90    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.94 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.2118
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114359'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.31 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:43:59
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-3.5830       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.97    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.01 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -3.5830
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114401'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.31 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:01
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.8996       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.96    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.99 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.8996
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114402-002'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.31 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:03
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9913       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.90    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.93 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9913
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114404-002'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.31 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:04
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.5244       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.92    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.95 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.5244
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114406-002'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.31 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:06
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.8027       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.92    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.95 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.8027
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114408-002'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.31 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:08
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.8707       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.91    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.93 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.8707
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114410-002'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.31 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:10
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.2789       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	1.01    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.04 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.2789
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114412-002'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.31 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:12
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.4092       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.89    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.92 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.4092
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114414-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.30 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:14
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.9221       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.92    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.96 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.9221
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114416-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.30 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:16
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.1550       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.93    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.96 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.1550
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114418-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.30 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:18
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.6901       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.95    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.99 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.6901
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114421'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.30 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:21
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9975       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.95    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.98 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9975
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114423'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.30 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:23
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.8003       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.91    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.94 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.8003
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114425'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.30 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:25
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.5044       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	1.01    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.04 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.5044
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114427'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.30 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:27
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.3727       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.95    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.98 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.3727
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114429'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.30 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:29
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.8767       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.98    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.02 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.8767
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114431'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.29 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:31
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.6453       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.96    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.99 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.6453
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114433'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.29 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:33
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.4101       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.97    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.00 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.4101
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114435'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.29 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:35
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.8509       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.97    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.00 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.8509
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114437'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.29 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:37
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.4771       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.95    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.99 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.4771
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114439'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.29 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:39
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.0000       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.94    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.98 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.0000
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114441'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.29 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:41
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	nan           = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.92    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.95 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: nan
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114443-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.29 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:43
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9877       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.94    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.98 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9877
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114445-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.28 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:45
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9685       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	1.35    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.38 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9685
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114447-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.46 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.28 GB / 34.36 GB (35.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:47
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	nan           = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.91    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.94 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: nan
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114449-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.28 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:49
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.6271       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.89    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.93 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.6271
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114451-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.28 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:51
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.8090       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.95    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.98 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.8090
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114453-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.28 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:53
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.6113       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.99    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.02 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.6113
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114455-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.28 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:55
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.3599       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.92    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.96 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.3599
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114457-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.28 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:57
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-2.2764       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.90    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.93 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -2.2764
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114459-001'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.27 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:44:59
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.6176       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	1.00    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.04 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.6176
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114501'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.27 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:01
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9661       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.92    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.95 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9661
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114503'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.7%)
+Disk Space Avail:   12.27 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:03
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9958       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.92    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.96 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9958
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114505'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.6%)
+Disk Space Avail:   12.27 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:05
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9961       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.91    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.94 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9961
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114507'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.6%)
+Disk Space Avail:   12.27 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:07
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9998       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.92    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.95 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9998
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114509'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.6%)
+Disk Space Avail:   12.27 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:09
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9989       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	1.11    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.14 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9989
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114511'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.6%)
+Disk Space Avail:   12.27 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:11
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.6979       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.92    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.96 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.6979
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114513'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.6%)
+Disk Space Avail:   12.27 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:13
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.5343       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.94    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 0.97 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.5343
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114515'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.6%)
+Disk Space Avail:   12.26 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:15
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-1.0000       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	1.02    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.06 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -1.0000
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114517'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.6%)
+Disk Space Avail:   12.26 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:17
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	nan           = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	1.02    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.05 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: nan
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114519'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.6%)
+Disk Space Avail:   12.26 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:19
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9996       = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	1.01    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.05 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9996
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114522'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.6%)
+Disk Space Avail:   12.26 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:22
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	nan           = Validation score (-MAPE)
+	0.01    s     = Training runtime
+	0.98    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.02 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: nan
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
+Beginning AutoGluon training... Time limit = 10s
+AutoGluon will save models to '/home/mngarcia/apifio/fio.backend/backend/AutogluonModels/ag-20250210_114524'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.10.12
+Operating System:   Linux
+Platform Machine:   x86_64
+Platform Version:   #141-Ubuntu SMP Fri Jan 10 21:18:28 UTC 2025
+CPU Count:          4
+GPU Count:          0
+Memory Avail:       2.45 GB / 7.75 GB (31.6%)
+Disk Space Avail:   12.26 GB / 34.36 GB (35.7%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAPE,
+ 'hyperparameters': {'Chronos': {'dropout_rate': 0.3,
+                                 'early_stopping': True,
+                                 'hidden_size': 512,
+                                 'learning_rate': 0.5,
+                                 'num_layers': 50}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'time_limit': 10,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'MS'
+Provided train_data has 133 rows, 1 time series. Median time series length is 133 (min=133, max=133). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAPE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-02-10 11:45:24
+Models that will be trained: ['Chronos[autogluon__chronos-bolt-small]']
+Training timeseries model Chronos[autogluon__chronos-bolt-small]. Training for up to 10.0s of the 10.0s of remaining time.
+	-0.9807       = Validation score (-MAPE)
+	0.02    s     = Training runtime
+	0.98    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['Chronos[autogluon__chronos-bolt-small]']
+Total runtime: 1.02 s
+Best model: Chronos[autogluon__chronos-bolt-small]
+Best model score: -0.9807
+Model not specified in predict, will default to the model with the best validation score: Chronos[autogluon__chronos-bolt-small]
