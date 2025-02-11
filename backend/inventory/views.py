@@ -842,7 +842,7 @@ class UploadInventoryCSV(APIView):
             df = df[columns]
             df.drop(columns=['hash', "family", "region", "sku", "category", "subcategory", "client", "salesman", "description"], inplace=True)
         
-        df.rename(columns={'Stock': 'stock', 'Sales Order Pending Deliverys': 'sales_order_pending_delivery'}, inplace=True)
+        df.rename(columns={'Stock': 'stock', 'Sales Order Pending Deliverys': 'sales_order_pending_delivery', 'Purchase Order': 'purchase_order'}, inplace=True)
 
         records = df.to_dict(orient="records")
 
@@ -860,11 +860,12 @@ class UploadInventoryCSV(APIView):
                 existing_record = existing_records[key]
                 existing_record.stock = record['stock']
                 existing_record.sales_order_pending_delivery = record['sales_order_pending_delivery']
+                existing_record.purchase_order = record['purchase_order']
                 updated_products.append(existing_record)
 
         with transaction.atomic():
             if updated_products:
-                Stock.objects.bulk_update(updated_products, ['stock', 'sales_order_pending_delivery'], batch_size=10000)
+                Stock.objects.bulk_update(updated_products, ['stock', 'sales_order_pending_delivery', 'purchase_order'], batch_size=10000)
         
         if no_stock_info:
             return Response(data={'message': 'succeed', 'skus_with_no_stock_info': no_stock_info}, status=status.HTTP_200_OK)

@@ -11,12 +11,7 @@ from rest_framework.decorators import action
 from rest_framework.views import APIView
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils.timezone import now
-import string
-from django.template.loader import render_to_string
-from django.core.mail import  EmailMessage
 from django.contrib.auth import get_user_model
-from django.conf import settings
-import threading
 
 
 # Create your views here.
@@ -40,7 +35,7 @@ class ClientsViewSet(ModelViewSet):
         serializer.save(updated_at=timezone.now())
 
     @action(detail=False, methods=['patch'], url_path='patch-client')
-    def update_client_info(self, request):
+    def update_client_info_partial(self, request):
         user_profile = UserInformation.objects.filter(user=request.user).first()
 
         if not user_profile:
@@ -146,37 +141,8 @@ class ClientsUserView(APIView):
         serializer = ClientUserSerializer(data=request.data, context={'request': request})
         if serializer.is_valid():
             serializer.save()
-            
-            subject = "Te damos la bienvenida - DTA F&IO"
-            
-            context = {
-                'username': serializer.validated_data['username'],
-                'password': serializer.validated_data['password'],
-                'user_admin': f'{request.user.first_name} {request.user.last_name}',
-                'link': f"{settings.FRONTEND_URL}",
-            }
-
-            html_message = render_to_string('welcome_new_user.html', context)
-
-            email = EmailMessage(
-                subject,
-                html_message,
-                settings.DEFAULT_FROM_EMAIL,
-                [serializer.validated_data['email']],
-            )
-            email.content_subtype = "html"
-
-            # 🔹 Enviar el email en un hilo separado
-            thread = threading.Thread(target=self.send_email, args=(email,))
-            thread.start()
-
             return Response({"message": "El usuario fue creado exitosamente"}, status=201)
-
-    @staticmethod
-    def send_email(email):
-        """Método estático para enviar el email en segundo plano"""
-        email.send()
-
+        return Response(serializer.errors, status=400)
 
     def patch(self, request, user_id):
         try:

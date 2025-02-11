@@ -18,7 +18,7 @@ import unicodedata
 from scipy import stats
 import threading
 from django.core.paginator import Paginator
-
+import traceback
 
 ## UPLOAD TEMPLATE VIEWS ##
 class FileViewSet(viewsets.ModelViewSet):
@@ -460,6 +460,14 @@ class UploadSalesCSV(APIView):
     permission_classes = [IsAuthenticated]
 
     @staticmethod
+    def format_dates(df: pd.DataFrame):
+        date_cols = df.columns[8:] 
+        date_cols_format = pd.to_datetime(date_cols, format='%d/%m/%y', errors='coerce')
+        df.rename(columns=dict(zip(date_cols, date_cols_format.strftime('%Y-%m-%d'))), inplace=True)
+
+        return df
+
+    @staticmethod
     def update_product_avg_after_bulk(to_create, to_update):
         product_ids_to_update = set(
             Sales.objects.filter(id__in=[sale.id for sale in to_create + to_update])
@@ -489,15 +497,16 @@ class UploadSalesCSV(APIView):
             df_sales = pd.DataFrame(sales_data)
             to_create = []
             to_update = []
-
+            
+            df_sales = df_sales.loc[:, ~df_sales.columns.str.contains('__EMPTY')]
             project = Projects.objects.get(client=client, name=project)
             actual_max_hsd = project.max_historical_date
-            
-            new_max_hsd = pd.to_datetime(df_sales.columns[-1], format='%d/%m/%Y', errors='coerce').strftime('%Y-%m-%d')
-            new_max_hsd = pd.to_datetime(new_max_hsd).date()
 
-            if new_max_hsd > actual_max_hsd:
-                project.max_historical_date = new_max_hsd
+            df_sales = self.format_dates(df=df_sales)
+            last_columnn_date = pd.to_datetime(df_sales.columns[-1], format='%Y-%m-%d').date()
+
+            if last_columnn_date > actual_max_hsd:
+                project.max_historical_date = last_columnn_date
                 project.save()
             
             for column in ["Family", "Region", "SKU", "Category", "Subcategory", "Client", "Salesman", "Description"]:
@@ -539,7 +548,9 @@ class UploadSalesCSV(APIView):
                 df_sales.drop(columns=['hash'], inplace=True)
 
                 df_sales.drop(columns=["family", "region", "sku", "category", "subcategory", "client", "salesman", "description"], inplace=True)
-                
+            
+            print(df_sales)
+
             df_sales = df_sales.melt(
                 id_vars=df_sales.columns[:1],
                 value_vars=df_sales.columns[1:], 
@@ -547,7 +558,7 @@ class UploadSalesCSV(APIView):
                 value_name='sale'
             )
             
-            df_sales['date'] = pd.to_datetime(df_sales['date'], format='%d/%m/%Y', errors='coerce').dt.date
+            print(df_sales)
 
             records = df_sales.to_dict(orient="records")
 
@@ -582,6 +593,7 @@ class UploadSalesCSV(APIView):
             return Response({"message": "sale_data_updated"}, status=status.HTTP_200_OK)
 
         except Exception as e:
+            traceback.print_exc()
             print(e)
             return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 

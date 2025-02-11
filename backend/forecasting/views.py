@@ -552,16 +552,6 @@ class AnalyticsViewsForScenarios:
                 if values:
                     filters &= Q(**{query: values})
 
-            related_filter_fields = [
-                ('cluster', 'metricsscenarios__cluster__in'),
-                ('abc', 'metricsscenarios__abc__in'),
-            ]
-
-            for field, query in related_filter_fields:
-                values = request.GET.getlist(field)
-                if values:
-                    filters &= Q(**{query: values})
-
             return queryset.filter(filters).distinct()
         
         def get(self, request):
@@ -673,7 +663,7 @@ class AnalyticsViewsForScenarios:
                 scenario=scenario,
                 product__in=product_ids,
                 best_model=True
-            ).values('product_id', 'model', 'ytg', 'qtg', 'mtg', 'error', 'cluster', 'abc')
+            ).values('product_id', 'model', 'ytg', 'qtg', 'mtg', 'error')
 
             # Filtrar las ventas predichas e incluir las columnas de best_models
             if conversion == 'price' and stock_data.exists():
@@ -685,14 +675,12 @@ class AnalyticsViewsForScenarios:
                     ytg=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('ytg')[:1]),
                     qtg=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('qtg')[:1]),
                     mtg=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('mtg')[:1]),
-                    cluster=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('cluster')[:1]),
                     error=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('error')[:1]),
-                    abc=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('abc')[:1]),
                     total_sale=ExpressionWrapper(
                         F('sale') * F('product__stock__cost_price'),
                         output_field=DecimalField()
                     )
-                ).values('product_id', 'date', 'total_sale', 'model', 'ytg', 'qtg', 'mtg', 'error', 'cluster', 'abc')
+                ).values('product_id', 'date', 'total_sale', 'model', 'ytg', 'qtg', 'mtg', 'error')
 
                 print(predicted_sales)
 
@@ -705,11 +693,9 @@ class AnalyticsViewsForScenarios:
                     ytg=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('ytg')[:1]),
                     qtg=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('qtg')[:1]),
                     mtg=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('mtg')[:1]),
-                    cluster=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('cluster')[:1]),
                     error=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('error')[:1]),
-                    abc=Subquery(metrics.filter(product_id=OuterRef('product_id')).values('abc')[:1]),
                     total_sale=Func('sale', function='ROUND', template='%(function)s(%(expressions)s, 2)')
-                ).values('product_id', 'date', 'total_sale', 'model', 'ytg', 'qtg', 'mtg', 'error', 'cluster', 'abc')
+                ).values('product_id', 'date', 'total_sale', 'model', 'ytg', 'qtg', 'mtg', 'error')
 
             if len(predicted_sales) == 0:
                 return Response({'message': 'No se corrieron escenarios para este proyecto'}, status=status.HTTP_400_BAD_REQUEST)
@@ -723,7 +709,7 @@ class AnalyticsViewsForScenarios:
             merged_df = pd.merge(products_df, sales_df, on='product_id', how='inner')
 
             predicted_pivot = predicted_sales_df.pivot_table(
-                index=['product_id', 'ytg', 'qtg', 'mtg', 'error', 'cluster', 'abc', 'model'],
+                index=['product_id', 'ytg', 'qtg', 'mtg', 'error', 'model'],
                 columns='date',
                 values='total_sale'
             ).reset_index()
@@ -735,7 +721,7 @@ class AnalyticsViewsForScenarios:
             additional_dates = [col for col in date_cols_df2 if col not in date_cols_df1]
 
             # Merge por product_id, manteniendo todas las filas de df1
-            merged_df = pd.merge(merged_df, predicted_pivot[['product_id', 'ytg', 'qtg', 'mtg', 'error', 'cluster', 'abc', 'model'] + additional_dates], on="product_id", how="left")
+            merged_df = pd.merge(merged_df, predicted_pivot[['product_id', 'ytg', 'qtg', 'mtg', 'error', 'model'] + additional_dates], on="product_id", how="left")
 
             # Ordenar columnas: mantener no-fechas primero, luego todas las fechas ordenadas
             non_date_cols = [col for col in merged_df.columns if not col.startswith("20")]
@@ -751,7 +737,6 @@ class AnalyticsViewsForScenarios:
                 "salesman": "Vendedor",
                 "sku": "SKU",
                 "description": "Descripcion",
-                "cluster": "Cluster",
                 'ytd': "YTD", 
                 'qtd': "QTD", 
                 'mtd': "MTD",
@@ -760,14 +745,13 @@ class AnalyticsViewsForScenarios:
                 'mtg': "MTG",
                 'avg': 'AVG',
                 "error": "Error",
-                "abc": "ABC",
                 "model": "Modelo",
             })
 
             new_order = [
                 "Familia", "Region", "Categoria", "Subcategoria", "Cliente", "Vendedor",
-                "SKU", "Descripcion", "Cluster", "YTD", "QTD", "MTD", "YTG", "QTG", 
-                "MTG", "AVG", "Error", "ABC", "Modelo"
+                "SKU", "Descripcion", "YTD", "QTD", "MTD", "YTG", "QTG", 
+                "MTG", "AVG", "Error", "Modelo"
             ]
 
             remaining_columns = merged_df.columns.difference(new_order, sort=False)
@@ -775,6 +759,7 @@ class AnalyticsViewsForScenarios:
             merged_df.fillna(0.0, inplace=True)
 
             warning = None 
+
             if conversion == 'price' and stock_data.exists() == False: warning ='No se encontraron datos de stock para calcular el forecast valorizado'
 
             if order is not None and export is None:
@@ -782,7 +767,7 @@ class AnalyticsViewsForScenarios:
             
             if export is not None:
                 return Response(data=merged_df.to_dict(orient='records'), status=status.HTTP_200_OK)
-
+        
             else:
                 return Response({
                     'data': merged_df.to_dict(orient='records'),
@@ -940,7 +925,7 @@ class ListModelsInformationAPIView(APIView):
 
         metrics_data = (
             metrics
-            .values_list('model', 'error', 'cluster', 'best_model', 'updated_at')
+            .values_list('model', 'error', 'best_model', 'updated_at')
         ) 
 
         data = {

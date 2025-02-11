@@ -1,0 +1,9 @@
+migrations
+db.sqlite3
+.venv
+.env
+*.xlsx
+__pycache__
+*.csv
+lightning_logs
+AutogluonModels

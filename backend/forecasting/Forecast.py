@@ -12,7 +12,11 @@ from datetime import date
 from django.db.models import Q, F
 from clients.models import Clients
 from projects.models import Projects
+from django.conf import settings
+from django.db import connection
 import statistics
+import os
+import csv
 
 
 warnings.filterwarnings("ignore")
@@ -285,10 +289,10 @@ class Forecast(object):
             error, last_period_error = error.calculate_error_periods_selected()
             ## Metrics Object ##
             metrics.append({ 
-                "scenario": self.scenario,
+                "scenario_id": self.scenario.id,
                 "product_id": product_id,
                 "error": error, 
-                "last_error": last_period_error,
+                "last_period_error": last_period_error,
                 "model": model_name, 
             })
 
@@ -301,11 +305,11 @@ class Forecast(object):
     @staticmethod
     def select_best_model(df: pd.DataFrame):
         df = df.copy()
-        df['best_model'] = False
+        df['best_model'] = 0
 
         ## Choose best model by lowest error
         idx_min_error = df.groupby('product_id')['error'].idxmin()
-        df.loc[idx_min_error, 'best_model'] = True
+        df.loc[idx_min_error, 'best_model'] = 1
         
         return df
 
@@ -427,86 +431,101 @@ class Forecast(object):
 
         for model_name in self.models:
             forecast_results, metrics, kpis = self.parallel_process(data=initial_data, model_name=model_name, actual=initial_data)
-            objects = []
 
             all_models_metrics.append(metrics)
             all_kpi_results[model_name] = kpis
-
-            for product_id, sales in forecast_results.items():
-                product = Product.objects.get(id=product_id)  
-                for sale, date in zip(sales, self.all_dates):
-                    objects.append(
-                        PredictedSale (
-                            scenario=self.scenario, 
-                            product=product,
-                            sale=sale,
-                            model=model_name,  
-                            date=date,
-                            colaborated_sale=sale
-                        )
-                    )
             
-            PredictedSale.objects.bulk_create(objects, batch_size=10000)
-        
-        ## Prepare data for best_model select
-        all_models_metrics = [item for sublist in all_models_metrics for item in sublist]
-        df = pd.DataFrame(all_models_metrics) 
-
-        ## Select best model
-        metrics_data = self.select_best_model(df=df)
-
-        ## Calculate kpi for best model
-        kpis_data = self.calculate_kpis(data=all_kpi_results)
-        
-        ## Concat results to metrics
-        def get_metrics(row):
-            model = row['model']
-            product_id = row['product_id']
-            return kpis_data.get(model, {}).get(product_id, {'ytg': None, 'qtg': None, 'mtg': None, 'avg': None, 'desv': None})
-        
-        metrics_df = metrics_data.apply(get_metrics, axis=1, result_type='expand')
-        metrics_data = pd.concat([metrics_data, metrics_df], axis=1)
-        metrics_data = self.cluster_products(products=metrics_data)
-
-        metrics = []
-        conditions = Q()
-
-        for data in metrics_data:
-            product = Product.objects.get(pk=data["product_id"])
+            file_path = os.path.join(settings.LOAD_DATA_INFILE_DIR, 'predicted_sale.csv')
             
-            if data['best_model'] == True:
-                conditions |= Q(product_id=data['product_id'], model=data['model'], scenario=data['scenario'])
+            with open(file_path, mode='w', newline='', encoding='utf-8') as temp_file:
+                csv_writer = csv.writer(temp_file)
+                # Write the CSV header
+                csv_writer.writerow(['product_id', 'date', 'sale'])
+
+                for product_id, sales in forecast_results.items():
+                    for sale, date in zip(sales, self.all_dates):
+                        csv_writer.writerow([
+                            self.scenario.id,  # scenario_id
+                            product_id,         # product_id
+                            sale,               # sale
+                            model_name,         # model
+                            date,               # date
+                            sale                # colaborated_sale
+                        ])
+                
             
-            ytg = data['ytg'] if data['ytg'] is not None and -2147483648 <= data['ytg'] <= 2147483647 else 0
-            qtg = data['qtg'] if data['qtg'] is not None and -2147483648 <= data['qtg'] <= 2147483647 else 0
-            mtg = data['mtg'] if data['mtg'] is not None and -2147483648 <= data['mtg'] <= 2147483647 else 0
+            temp_file_name = file_path.replace("\\", "/")
+            
+            sql = f"""
+                LOAD DATA INFILE '{temp_file_name}'
+                INTO TABLE forecasting_predictedsale
+                FIELDS TERMINATED BY ',' 
+                LINES TERMINATED BY '\n'
+                IGNORE 1 ROWS
+                (scenario_id, product_id, sale, model, date, colaborated_sale)
+            """
 
-
-            metrics.append(
-                MetricsScenarios(
-                    scenario=data['scenario'],
-                    product=product,
-                    best_model=data['best_model'],
-                    last_period_error=data['last_error'],
-                    model=data['model'],
-                    error=data['error'],
-                    ytg=ytg,
-                    qtg=qtg,
-                    mtg=mtg,
-                    cluster=data['Cluster'],
-                    abc=data['ABC']
-                )
-            )
-
-        sales_to_update = PredictedSale.objects.filter(conditions)
+            with connection.cursor() as cursor:
+                cursor.execute(sql)
         
-        for sale in sales_to_update:
-            sale.best_model = True
+            os.remove(file_path)
+            
+        flattened_metrics = [item for sublist in all_models_metrics for item in sublist]
+        df = pd.DataFrame(flattened_metrics)
 
-        PredictedSale.objects.bulk_update(sales_to_update, ['best_model'], batch_size=10000)
-        MetricsScenarios.objects.bulk_create(metrics, batch_size=10000)
+        if len(self.models) > 1:
+            metrics_data = self.select_best_model(df=df)
+        else:
+            df['best_model'] = 1  
+            metrics_data = df
 
+        metrics_data = metrics_data[['scenario_id', 'product_id', 'model', 'best_model', 'last_period_error', 'error']]
 
+        file_path = os.path.join(settings.LOAD_DATA_INFILE_DIR, 'metrics_data.csv')
+        with open(file_path, mode='w', newline='', encoding='utf-8') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            # Escribir el encabezado (se omite en la carga con IGNORE 1 ROWS)
+            csv_writer.writerow(['scenario_id', 'product_id', 'model', 'best_model', 'last_period_error', 'error'])
+            # Escribir cada fila
+            for _, row in metrics_data.iterrows():
+                csv_writer.writerow([
+                    row['scenario_id'],    # scenario_id
+                    row['product_id'],
+                    row['model'],
+                    row['best_model'],
+                    row['last_period_error'],
+                    row['error']
+                ])
+
+        # Asegurar compatibilidad de la ruta en distintos SO
+        temp_file_name = file_path.replace("\\", "/")
+
+        # 3. Cargar la data de métricas a la tabla metrics_scenarios con LOAD DATA INFILE
+        load_metrics_sql = f"""
+            LOAD DATA INFILE '{temp_file_name}'
+            INTO TABLE forecasting_metricsscenarios
+            FIELDS TERMINATED BY ',' 
+            LINES TERMINATED BY '\n'
+            IGNORE 1 ROWS
+            (scenario_id, product_id, model, best_model, last_period_error, error)
+        """
+        with connection.cursor() as cursor:
+            cursor.execute(load_metrics_sql)
         
+        os.remove(file_path)
+        
+        update_best_model_sql = """
+                UPDATE forecasting_predictedsale ps
+                JOIN forecasting_metricsscenarios ms
+                    ON ps.scenario_id = ms.scenario_id 
+                    AND ps.product_id = ms.product_id
+                    AND ps.model = ms.model
+                SET ps.best_model = 1
+                WHERE ms.best_model = 1
+            """
+            
+        with connection.cursor() as cursor:
+            cursor.execute(update_best_model_sql)
+
 
 

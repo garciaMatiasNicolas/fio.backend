@@ -32,3 +32,4 @@ DATABASES = {
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 FRONTEND_URL = os.getenv('FRONTEND_URL')
+LOAD_DATA_INFILE_DIR = '/var/lib/mysql-files'
